@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'hurme_geometric_sans_3black';
+    src: url('../fonts/hurmegeometricsans3_black-webfont.woff') format('woff2'),
+         url('../fonts/hurmegeometricsans3_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hurme_geometric_sans_3bold';
+    src: url('../fonts/hurmegeometricsans3_bold-webfont.woff2') format('woff2'),
+         url('../fonts/hurmegeometricsans3_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hurme_geometric_sans_3regular';
+    src: url('../fonts/hurmegeometricsans3_regular-webfont.woff2') format('woff2'),
+         url('../fonts/hurmegeometricsans3_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hurme_geometric_sans_3light';
+    src: url('../fonts/hurmegeometricsans3_light-webfont.woff2') format('woff2'),
+         url('../fonts/hurmegeometricsans3_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.body {
+  font-family: "hurme_geometric_sans_3regular";
+}
+
+.inputDiv {
+  border-radius: 15px;
+  box-shadow: 10px 10px 45px rgba(38, 0, 203, 0.15);
+}
+
+.dropshadow {
+  box-shadow: 10px 10px 45px rgba(38, 0, 203, 0.15);
+}
+
+.rounded-15 {
+  border-radius: 15px;
+}
+
+.border-2 {
+	border: 2px solid #1012CD 
+}
+
+.toggle {
+	background: rgba(255,255,255,1.00);
+	margin-bottom: -12px;
+}
+
+.progress {
+	height: 8px;
+}
+
+.banner {
+	margin: 1.1em;
+}
+
+img {
+	overflow: ;
+}
+
+.opacity-75 {
+	opacity: 0.75;
+}
+
+.opacity-50 {
+	opacity: 0.50;
+}
+
+.words {
+	font-family: "hurme_geometric_sans_3black";
+	color: white;
+	line-height: 80%;
+}
+
+.allcaps {
+	text-transform: uppercase;
+}
+
+.text-label {
+	text-align:left;
+	position: absolute;
+	top: -22px;
+	left: 20px;
+	font-family: "hurme_geometric_sans_3light";
+	font-size: 15;
+	}
+
+.version {
+	text-align:left;
+	position: absolute;
+	font-family: "hurme_geometric_sans_3light";
+	font-size: 15;
+	top: 20px;
+	left: 20px;
+}
+
+.checkbox-label {
+  text-align:left;
+  position: absolute;
+  top: -21px;
+  left: 20px;
+}
+
+.textBox {
+	text-align: left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	float: left;
+/*	background: rgba(255,0,0,0.7);*/
+}
+
+.textBox-right {
+	text-align: right; !important
+	float: right; !important
+}
+
+.highlight {
+    background: rgba(255,255,255,0.4);
+}
+
+.base {
+    background: rgba(255,255,255,0);
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+.slider {
+	text-align:right;
+	position: absolute;
+	top: -13px;
+}
