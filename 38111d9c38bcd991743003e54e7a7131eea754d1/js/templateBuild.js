@@ -31,7 +31,9 @@ $(document).ready(function () {
 	
 	addSizeLabel();
 	
-	updateAllWords("Words");
+
+
+	updateAllWords("Words"); //---- this function create the words and changes the colours
 	
 	toggleType()
 	
@@ -209,9 +211,12 @@ $(document).ready(function () {
 	
 	
   $('#toggleSelect').click(function (event) {
+
+
+
     event.preventDefault();
 
-    //console.log("click!")
+    console.log("click!")
 
     var targetDivs = document.getElementById("banners").getElementsByClassName("banner");
 
@@ -227,6 +232,7 @@ $(document).ready(function () {
       }
 
     }
+
 
   });
 });
@@ -264,16 +270,32 @@ function updateAllWords(words){
 	
 	var targetDivs = document.getElementById("banners").getElementsByClassName("textBox");
 	  
+	var s = $("input[name='typeToggle']:checked").val();
+	//console.log(s);
+
+	//---- ↓Text Colour changes based on file name↓ ------- 
+	var textColour="#000";
+	if (s == "SPECIAL" || s == "AL-SPECIAL" || s == "DUO-SPECIAL")
+	{
+		textColour = "#1012CD"; //BLUE
+	}
+	if (s == "BREAKING" || s == "AL-BREAKING")
+	{
+		textColour = "#e70217"; //RED
+	}
+
+
+
 	//Update words
 	for (var i = 0; i < targetDivs.length; i++) {
 		
       var e = targetDivs[i];
 
-      updateWords(words,e)
+      updateWords(words,e,textColour)
     }
 }
 
-function updateWords(words,e){
+function updateWords(words,e,tc){
 	
 	var divID = e.getElementsByClassName("words")[0];
 
@@ -284,6 +306,8 @@ function updateWords(words,e){
 
 	//var h = $(e)[0].getBoundingClientRect().height;
 
+
+
 	//Adjust text to fill
 	$(e).textfill({
 		changeLineHeight: true,
@@ -291,6 +315,11 @@ function updateWords(words,e){
 		//minFontPixels: fontSize,
 		//debug: true,
 	});
+
+
+
+	e.children[0].style.color = tc;
+
 }
 
 function setSliders(e){
@@ -352,7 +381,7 @@ function toggleType(){
 	$('#types').change(function(){
 		var s = $("input[name='typeToggle']:checked").val();
 
-		//console.log(s);
+		console.log(s);
 		
 		var images = $('img');
 		
@@ -367,14 +396,24 @@ function toggleType(){
 			$(images[i]).attr("src", name);
 			
 			//console.log(src);
-			console.log(name);
+			//console.log(name);
 			
 			//$(this).attr("src", "images/card-front.jpg");
 		}
+
+
+
 		gtag('event', 'toggle_Type', {
 		  "slected_type": s,
 		});
 		
+
+		var words = document.getElementById('wordsInput').value;
+		if (words == ""){
+			words = "Words"
+		};
+		updateAllWords(words);
+
 	});
 	
 }
